@@ -316,10 +316,6 @@ img {
     justify-content: center;
 }
 
-.second-section, .third-section, .fourth-section {
-    padding: 120px 0;
-}
-
 .list {
     display: flex;
     flex-direction: row;
@@ -335,11 +331,15 @@ img {
     transform: translateY(0);
 }
 
+.second-section {
+  margin: 120px 0px;
+}
+
 .second-section-list-item {
     width: calc((100% - 72px) / 4);
 }
 
-.third-section .container  ul { 
+.third-section-list { 
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -347,12 +347,15 @@ img {
     gap: 24px;
 }
 
+.fourth-section {
+  margin: 120px 0px;
+}
+
 .fourth-section .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 1000px;
     gap: 71px;
     margin: 80px 200px;
     margin: 0 auto;
@@ -743,10 +746,316 @@ img {
   .modal-form-fields-comment {
     margin-bottom: 16px;
   }
+
+  .burger-btn {
+    display: none;
+  }
   
 
 
+@media screen and (min-width: 320px) and (max-width: 1167px){
+    .container {
+      max-width: 320px;
+    }
 
+    .header .container {
+      justify-content: space-between;
+      padding: 16px;
+      align-items: unset;
+    }
+
+    .burger-btn {
+      display: block;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+    }
+
+    .header-link,
+    .address-link {
+      display: none;
+    }
+
+    .first-section .container {
+      display: contents;
+    }
+
+    .first-section {
+      max-width: 320px;
+      padding: 72px 52px;
+      margin-bottom: 96px;
+    }
+
+    .first-section-header {
+      background-color: rgb(255, 255, 255, 0%);
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: 0.02em;
+    }
+
+
+    .second-section .list {
+      flex-direction: column;
+      gap: 72px;
+      margin: 0px 16px;
+    }
+    
+
+    .second-section-list-item {
+      width: 100%;
+    }
+
+    .second-section .container {
+      padding-bottom: 96px;
+    }
+
+    .picture-container {
+      display: none;
+    }
+
+    .element-header {
+      text-align: center;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: 0.02em;
+    }
+
+    .third-section-list {
+      flex-direction: column;
+    }
+
+    .third-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 96px 0px;
+    }
+    
+    .third-section-list-item {
+      width: 100%;
+    }
+
+    .third-section-list-item{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .third-section-list-item img {
+      background-size: cover;
+      background-position: center; /* Центрування зображення */
+      background-repeat: no-repeat; /* Запобігання повторенню */
+    }
+
+    .fourth-section {
+      padding: 96px 0px;
+    }
+
+    .fourth-section .container .list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+
+    .fourth-item {
+      width: 288px;
+    }
+
+    .card-container .element-header {
+      text-align: start;
+    }
+
+    .fourth-image {
+      width: 288px;
+      height: 280px;
+    }
+
+    .element-header {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: normal;
+    }
+
+    .footer {
+      padding: 96px 16px;
+    }
+
+    .footer .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      margin-right: 0;
+    }
+  
+    .footer-logo-section,
+    .social-media-section {
+      margin-right: 0px;
+    }
+
+    .footer-logo-section,
+    .social-media-section {
+      margin-bottom: 72px;
+    }
+
+    .subscribe-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1167px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .navigation {
+    gap: 120px;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  .header .container {
+    padding: 0px 16px;
+  }
+
+  .header-link {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .header-link, .address-link {
+    text-align: left;
+    font-style: normal;
+    display: flex;
+  }
+
+  .address-link ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .address-link{
+    padding: 16px 0;
+  }
+
+  .information {
+    font-size: 14px;
+  }
+
+  .first-section {
+    max-width: 768px;
+    min-height: 436px;
+    padding: 112px 136px;
+    margin-bottom: 96px;
+  }
+
+  .second-section .container  {
+    padding: 0px;
+  }
+
+  .second-section .list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: unset;
+    row-gap: 76px;
+    column-gap: 24px;
+  }
+
+  .second-section-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .element-header {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
+
+  .third-section-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .third-section-list-item {
+    width: unset;
+  }
+  
+  .third-element-header {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: normal;
+  }
+
+  .fourth-section .container .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer .container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+  }
+  
+  .footer-logo-section, .social-media-section {
+    margin-bottom: 0px;
+  }
+
+  .footer-logo-section {
+    width: 264px;
+  }
+
+  .subscribe-form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .subscribe-button {
+    height: 40px;
+  }
+
+  .footer-rows {
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    margin-bottom: 76px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .social-media-section-p{
+    font-size: 24px;
+  }
+}
 
 
 
