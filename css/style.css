@@ -759,6 +759,10 @@ img {
     display: none;
   }
 
+  .mobile-menu-modal {
+    display: none;
+  }
+
 @media screen and (min-width: 320px) and (max-width: 1158px){
     .container {
       max-width: 320px;
@@ -1261,6 +1265,10 @@ img {
 
   .modal {
     width: 408px;
+  }
+
+  .mobile-menu-modal {
+    display: none;
   }
 }
 
