@@ -129,7 +129,6 @@ h1 {
     letter-spacing: inherit;
     color: var(--white-text-color);
     font-size: 56px;
-    background-color: var(--navy-blue-color);
     line-height: 60px;
 }
 
@@ -226,6 +225,7 @@ h3 {
 
 .third-section {
     background-color: var(--cloud-color);
+    padding: 120px 0;
 }
 
 .header-section {
@@ -301,7 +301,7 @@ h3 {
 }
 
 .footer-paragraph {
-    color: var(--cloud-color);
+  color: var(--cloud-color);
 }
 
 img {
@@ -332,7 +332,7 @@ img {
 }
 
 .second-section {
-  margin: 120px 0px;
+  padding: 120px 0px;
 }
 
 .second-section-list-item {
@@ -448,13 +448,21 @@ img {
     display: flex;
     align-items: baseline;
   }
+  
+  .footer-content {
+    display: flex;
+  }
+
+  .footer-rows { 
+    display: flex;
+  }
 
   .footer-logo-section {
     margin-right: 120px;
   }
 
   .social-media-section{
-    margin-right: 120px;
+    margin-right: 80px;
   }
 
   .social-media-section-p{
@@ -750,10 +758,8 @@ img {
   .burger-btn {
     display: none;
   }
-  
 
-
-@media screen and (min-width: 320px) and (max-width: 1167px){
+@media screen and (min-width: 320px) and (max-width: 1158px){
     .container {
       max-width: 320px;
     }
@@ -781,12 +787,13 @@ img {
     }
 
     .first-section {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-mobile.svg);
       max-width: 320px;
-      padding: 72px 52px;
-      margin-bottom: 96px;
+      padding: 72px 0px;
     }
 
     .first-section-header {
+      width: 216px;
       background-color: rgb(255, 255, 255, 0%);
       font-weight: 700;
       font-size: 36px;
@@ -794,20 +801,18 @@ img {
       letter-spacing: 0.02em;
     }
 
+    .second-section {
+      padding: 96px 0px;
+    }
 
     .second-section .list {
       flex-direction: column;
       gap: 72px;
-      margin: 0px 16px;
     }
     
 
     .second-section-list-item {
       width: 100%;
-    }
-
-    .second-section .container {
-      padding-bottom: 96px;
     }
 
     .picture-container {
@@ -834,11 +839,19 @@ img {
       padding: 96px 0px;
     }
     
+    .third-section .container {
+      width: 296px;
+    }
+
+    .third-section-list {
+      gap: 72px;
+    }
+
     .third-section-list-item {
       width: 100%;
     }
 
-    .third-section-list-item{
+    .third-section-list-item {
       display: flex;
       flex-direction: column;
     }
@@ -849,8 +862,28 @@ img {
       background-repeat: no-repeat; /* Запобігання повторенню */
     }
 
+    .third-element-header {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      font-weight: bold;
+      letter-spacing: normal;
+    }
+
+    
+  .third-element-paragraph {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+
     .fourth-section {
+      margin: 0;
       padding: 96px 0px;
+    }
+
+    .fourth-section .container {
+      display: unset;
     }
 
     .fourth-section .container .list {
@@ -873,14 +906,15 @@ img {
     }
 
     .element-header {
-      font-size: 24px;
-      font-weight: 400;
-      line-height: 1.05;
+      font-size: 36px;
+      margin: 0;
+      line-height: 40px;
+      font-weight: bold;
       letter-spacing: normal;
     }
 
     .footer {
-      padding: 96px 16px;
+      padding: 96px 0;
     }
 
     .footer .container {
@@ -889,6 +923,7 @@ img {
       justify-content: center;
       align-items: center;
       text-align: center;
+      width: 320px;
     }
 
     .logo {
@@ -913,9 +948,163 @@ img {
       gap: 24px;
     }
 
+    .social-media-section-list {
+      justify-content: center;
+    }
+
+    .subscribe-input {
+      width: 288px;
+    }
+
+    .subscribe-button {
+      height: 40px;
+    }
+
+    .modal {
+      width: 288px;
+    }
+
+    .footer-content {
+      display: unset;
+    }
+  
+    .footer-rows { 
+      display: unset;
+    }
+
+    .card-container .element-header {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: bold;
+      letter-spacing: normal;
+    }
+    
+    .is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
 }
 
-@media screen and (min-width: 768px) and (max-width: 1167px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .mobile-menu-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 72px 16px 40px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 999;
+    opacity: 1;
+    visibility: hidden;
+    pointer-events: auto;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: transform;
+    transform: translateX(0);
+  }
+
+  .mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .mobile-menu-close-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu-close-button:active {
+    background-color: #404bbf;
+  }
+
+  .mobile-menu-close-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu-close-icon:active {
+    fill: #fff;
+  }
+
+  .mobile-navigation {
+    margin-bottom: auto;
+  }
+
+  .mobile-navigation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+  }
+
+  .mobile-navigation-link:active {
+    color: #404bbf;
+  }
+
+  .mobile-contact-info {
+    margin-bottom: 48px;
+  }
+
+  .mobile-contact-item:first-child {
+    margin-bottom: 24px;
+  }
+
+  .mobile-contact-link {
+    font-size: 20px;
+    color: #434455;
+  }
+
+  .mobile-contact-link.active-contact {
+    color: #4d5ae5;
+  }
+
+  .mobile-social-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .mobile-menu-modal .mobile-social-list {
+    justify-content: start;
+    gap: 40px;
+  }
+
+  .mobile-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-social-icon {
+    fill: #f4f4fd;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1158px) {
   .container {
     max-width: 768px;
   }
@@ -953,7 +1142,7 @@ img {
   }
 
   .address-link{
-    padding: 16px 0;
+    padding: 0;
   }
 
   .information {
@@ -961,10 +1150,20 @@ img {
   }
 
   .first-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-tablet.svg);
     max-width: 768px;
-    min-height: 436px;
-    padding: 112px 136px;
-    margin-bottom: 96px;
+    padding: 112px 0px;
+  }
+
+  .first-section-header {
+    width: 496px;
+    font-size: 56px;
+    line-height: 60px;
+  }
+
+  .second-section {
+    margin: 0;
+    padding: 96px 0px;
   }
 
   .second-section .container  {
@@ -975,11 +1174,11 @@ img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
     gap: unset;
     row-gap: 76px;
     column-gap: 24px;
+    margin: 0;
   }
 
   .second-section-list-item {
@@ -987,34 +1186,40 @@ img {
   }
 
   .element-header {
-    display: block;
-    font-size: 1.5em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 36px;
+    line-height: 40px;
     font-weight: bold;
+    margin: 0;
+  }
+
+  .element-paragraph {
+    font-size: 16px;
   }
 
   .third-section-list {
     flex-direction: row;
     flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 64px;
   }
 
   .third-section-list-item {
     width: unset;
   }
   
-  .third-element-header {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.05;
-    letter-spacing: normal;
+  .third-section .container {
+    width: 768px;
   }
 
   .fourth-section .container .list {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .fourth-item {
+    width: ((100% - 24px) / 2);
   }
 
   .footer .container {
@@ -1035,7 +1240,9 @@ img {
   .subscribe-form {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
   }
+
 
   .subscribe-button {
     height: 40px;
@@ -1052,8 +1259,8 @@ img {
     font-size: 24px;
   }
 
-  .social-media-section-p{
-    font-size: 24px;
+  .modal {
+    width: 408px;
   }
 }
 
